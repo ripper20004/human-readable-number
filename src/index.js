@@ -12,6 +12,6 @@ module.exports = function toReadable (number) {
         return number % 10 === 0 ? tens[number / 10 | 0]
             : tens[number / 10 | 0] + " " + lessThenTwenty[number % 10];
     }
-    return number % 100 === 0 ? lessThenTwenty[number / 100 | 0] + 'hundred'
-        : lessThenTwenty[number / 100 | 0] + 'hundred' + toReadable(number % 100);
+    return number % 100 === 0 ? lessThenTwenty[number / 100 | 0] + ' hundred'
+        : lessThenTwenty[number / 100 | 0] + ' hundred ' + toReadable(number % 100);
 }
